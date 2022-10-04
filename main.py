@@ -41,11 +41,11 @@ def search():
             for key in data:
                 if key == website_entry.get():
                     searched_site_name = key
-        searched_site_dict = data[searched_site_name]
-        searched_mail = searched_site_dict['email']
-        searched_password = searched_site_dict['password']
-        messagebox.showinfo(title=searched_site_name,
-                            message=f"email: {searched_mail}\nPassword: {searched_password}", )
+                searched_site_dict = data[searched_site_name]
+                searched_mail = searched_site_dict['email']
+                searched_password = searched_site_dict['password']
+                messagebox.showinfo(title=searched_site_name,
+                                    message=f"email: {searched_mail}\nPassword: {searched_password}", )
     except UnboundLocalError:
         messagebox.showwarning(title="Wrong Website!", message="Better check website spelling")
     except json.decoder.JSONDecodeError:
